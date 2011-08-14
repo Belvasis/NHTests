@@ -19,7 +19,7 @@ public class BooleanM1 :  IUserType
 
     public Type ReturnedType
     {
-        get { return typeof(bool); }//{ return typeof(BooleanM1); }
+        get { return typeof(bool); }
     }
 
     public SqlType[] SqlTypes

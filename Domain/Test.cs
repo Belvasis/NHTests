@@ -9,6 +9,7 @@ namespace Core.Test.Domain
   {
     virtual public long         ID          { get; set; }
     virtual public string       Description { get; set; }
+    virtual public bool         Active      { get; set; }
     virtual public TestCategory Category    { get; set; }
   }
 }

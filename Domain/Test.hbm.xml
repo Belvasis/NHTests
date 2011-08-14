@@ -5,6 +5,7 @@
       <generator class="native" />
     </id>
     <property    name="Description"  column="DESCRIPTION" />
+    <property    name="Active"       column="ACTIVE" type="Core.Persistence.NH.Types.BooleanM1,Core.Test"/>
     <many-to-one name="Category"     column="CAT_ID" class="TestCategory" not-found="ignore"/>
   </class>
 </hibernate-mapping>

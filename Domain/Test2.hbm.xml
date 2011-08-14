@@ -5,6 +5,6 @@
       <generator class="native" />
     </id>
     <property    name="Description"  column="DESCRIPTION" />
-    <many-to-one name="Category"     column="CAT_ID" class="TestCategory" not-found="ignore" not-null="false" />
+    <many-to-one name="Category"     column="CAT_ID" class="TestCategory" not-found="ignore"/>
   </class>
 </hibernate-mapping>

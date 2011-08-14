@@ -43,5 +43,17 @@ namespace Core.Test
             });
       }    
     }
+
+    [Test]
+    public void Test_Query_UserType()
+    {
+      using (var Session = pFactory.OpenSession())
+      { 
+        Assert.DoesNotThrow(() => 
+            {
+              var pList = Session.Query<Test>().Where( c => c.Active ).ToList();
+            });
+      }    
+    }
   }
 }
