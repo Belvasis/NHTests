@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Core.Test.Domain" assembly="Core.Test">
+  <class name="Test2" table="T_TEST2">
+    <id name="ID" column="TEST_ID" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property    name="Description"  column="DESCRIPTION" />
+    <many-to-one name="Category"     column="CAT_ID" class="TestCategory" not-found="ignore" not-null="false" />
+  </class>
+</hibernate-mapping>

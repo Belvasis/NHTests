@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Core.Test.Domain" assembly="Core.Test">
+  <class name="TestCategory" table="T_CATEGORY">
+    <id name="ID" column="CAT_ID" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property    name="Description"  column="DESCRIPTION" />
+    <many-to-one name="Parent"       column="P_CAT_ID"  class="TestCategory" not-found="ignore" lazy="no-proxy"/>
+
+    
+    <set name="Childs" table="T_CATEGORY"
+          inverse="true"
+          lazy="true"
+          cascade="all-delete-orphan">
+      <key column="P_CAT_ID" />
+      <one-to-many class="TestCategory" />
+    </set>
+
+  </class>
+</hibernate-mapping>
